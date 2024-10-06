@@ -18,15 +18,15 @@
 <body>    
 <div class="container">    
     <nav>    
-        <ul>    
-            <li><a href="#about" onclick="showSection('about')">关于我们</a></li>
-            <li><a href="#recuit" onclick="showSection('recuit')">纳新须知</a></li>
-            <li><a href="#team" onclick="showSection('team')">联系我们</a></li>    
+        <ul style="cursor: pointer;">    
+            <li id="start" onclick="showSection('about');showSectionanimation(this);"><a href="#about">关于我们</a></li>
+            <li onclick="showSection('recuit');showSectionanimation(this);"><a href="#recuit">纳新须知</a></li>
+            <li onclick="showSection('team');showSectionanimation(this);"><a href="#team">联系我们</a></li>    
         </ul>    
     </nav>    
     <div class="content">    
         <section id="about" class="active">   
-                <h1 class="come"><br>HRT D&E 感知组 提前批科研训练活动</h1>  
+                <h1 class="come"><br>HRT D&E 感知组简介</h1>  
                 <div class="subtitle">简介</div>  
                 <div class="ans">
                     <p>
@@ -292,44 +292,17 @@
                 <div class="card">  
                     <pre>罗鹏硕     QQ: 3437154578</pre>
                 </div>
-                <!-- | 刘钰康 | 2823581355 |
-| 李如一 | 327754184  |
-| 高涵锴 | 1971679713 |
-| 刘平安 | 2181662158 |
-| 任少山 | 1084075303 |
-| 郑权涌 | 2421594879 |
-|  李钦  | 972619081  |
-| 杨志超 | 1036711084 |
-| 程国轩 | 2460662292 |
-| 罗鹏硕 | 3437154578 | -->
             </div>
         </section>       
     </div>    
 </div>    
 
-<script>  
-function showSection(id) {  
-    // 移除所有section的active类  
-    var sections = document.querySelectorAll('.content section');  
-    sections.forEach(function(section) {  
-        section.classList.remove('active');  
-    });  
-      
-    // 添加active类到被点击的section  
-    var selectedSection = document.getElementById(id);  
-    if (selectedSection) {  
-        selectedSection.classList.add('active');  
-    }  
-}  
-  
-// 页面加载时默认显示“关于我们”  
-window.onload = function() {  
-    showSection('about');  
-};  
+<script src="./route.js">  
+</script>  
+<script src="./animate.js">  
 </script>  
 
-<script type="text/javascript" color="255,255,255" opacity='0.9' zIndex="-2" count="99" src="https://blog-static.cnblogs.com/files/jingmoxukong/canvas-nest.min.js">
-    
+<script type="text/javascript" color="255,255,255" opacity='0.9' zIndex="-2" count="99" src="./line-animation.js">
 </script>
   
 </body>    
