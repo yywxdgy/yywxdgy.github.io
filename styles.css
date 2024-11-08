@@ -56,7 +56,9 @@ nav ul li a {
     height: auto;
 }
 .content {
-    padding: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 }
 .stress-font {
     font-weight: bold;
@@ -94,6 +96,10 @@ section {
     .container {
         flex-direction: row;
         font-size: 50px;
+    }
+    .content section.active {
+        width: 100%;
+        display: block;
     }
     nav {
         width: 20%;
@@ -188,8 +194,18 @@ section {
 /* æ·»åŠ å°äºŽ768pxçš„æ ·å¼ */
 
 @media (max-width: 767px) {
+    .side_bar {
+        width:100vw;
+        opacity:0.85;
+        border:1px #7a7a7a solid;
+        border-radius: 0px 15px 15px 0px;
+    }
+    .logo {
+        width: 8vw;
+    }
     nav {
         height: 40px;
+        font-size: 10px;
     }
     nav ul {
         display: flex;
@@ -207,11 +223,20 @@ section {
         height: 100%;
     }
     nav ul li {
+        display: flex;
         width: calc(100%/var(--section-number));
         height: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
     nav ul li a {
-        font-size: 25px;
+        font-size: 19px;
+    }
+    pre {
+        display: flex;
+        white-space: pre-line;
     }
     .image-container {
         display: flex;
@@ -234,6 +259,11 @@ section {
     .container {
         flex-direction: row;
         font-size: 20px;
+    }
+    .content section.active {
+        width: 90%;
+        padding: 5%;
+        display: block;
     }
     .subtitle {
         font-size: 25px;
