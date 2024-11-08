@@ -17,13 +17,13 @@ nav {
     background-color: #333;
     text-align: center;
     position: fixed;
-    /* 固定定位 */
+    /* å›ºå®šå®šä½ */
     top: 0;
-    /* 距离顶部0 */
+    /* è·ç¦»é¡¶éƒ¨0 */
     width: 100%;
-    /* 宽度100% */
+    /* å®½åº¦100% */
     z-index: 1000;
-    /* 确保导航栏在最上层 */
+    /* ç¡®ä¿å¯¼èˆªæ åœ¨æœ€ä¸Šå±‚ */
 }
 nav ul {
     list-style: none;
@@ -40,6 +40,20 @@ nav ul li a {
     text-decoration: none;
     font-size: 16px;
     text-align: center;
+}
+.title_icon {
+    border-radius: 20%;
+}
+.logo {
+    border: 1px #f1f2f3 solid;
+    border-radius: 2vw;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 2px;
+    width: 10vw;
+    height: auto;
 }
 .content {
     padding: 20px;
@@ -61,13 +75,20 @@ nav ul li a {
     color: #ffffff;
     font-size: 26px;
 }
+.side_bar {
+    width:15vw;
+    opacity:0.85;
+    border:1px #7a7a7a solid;
+    border-radius: 0px 15px 15px 0px;
+}
 .show {
+    border-radius: 33px;
     background-color: #211f23;
 }
 section {
     margin-bottom: 20px;
 }
-/* 响应式设计 */
+/* å“åº”å¼è®¾è®¡ */
 
 @media (min-width: 768px) {
     .container {
@@ -138,9 +159,9 @@ section {
     .image-container img {
         max-width: 87%;
         min-width: 60%;
-        /* 确保图片在小屏幕上也能完整显示 */
+        /* ç¡®ä¿å›¾ç‰‡åœ¨å°å±å¹•ä¸Šä¹Ÿèƒ½å®Œæ•´æ˜¾ç¤º */
         margin-top: 10px;
-        /* 与上方内容保持一定距离 */
+        /* ä¸Žä¸Šæ–¹å†…å®¹ä¿æŒä¸€å®šè·ç¦» */
     }
     .image-container p {
         font-size: 18px;
@@ -164,7 +185,7 @@ section {
         font-size: 50px;
     }
 }
-/* 添加小于768px的样式 */
+/* æ·»åŠ å°äºŽ768pxçš„æ ·å¼ */
 
 @media (max-width: 767px) {
     nav {
@@ -202,9 +223,9 @@ section {
     }
     .image-container img {
         max-width: 100%;
-        /* 确保图片在小屏幕上也能完整显示 */
+        /* ç¡®ä¿å›¾ç‰‡åœ¨å°å±å¹•ä¸Šä¹Ÿèƒ½å®Œæ•´æ˜¾ç¤º */
         margin-top: 10px;
-        /* 与上方内容保持一定距离 */
+        /* ä¸Žä¸Šæ–¹å†…å®¹ä¿æŒä¸€å®šè·ç¦» */
     }
     .image-container p {
         font-size: 16px;
